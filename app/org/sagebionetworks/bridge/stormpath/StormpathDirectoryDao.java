@@ -208,10 +208,16 @@ public class StormpathDirectoryDao implements DirectoryDao {
         template.setTextBody(body);
         template.setHtmlBody(body);
 
+        /*
+
+        The developer plan from Stormpath, which is free doesn't allow this. This I don't want to pay for anything, I
+        am just not going to save an email template here.
+
         String link = String.format("%s/mobile/resetPassword.html?study=%s", config.getBaseURL(), study.getIdentifier());
         template.setLinkBaseUrl(link);
         template.save();
-        
+         */
+
         PasswordStrength strength = passwordPolicy.getStrength();
         strength.setMaxLength(org.sagebionetworks.bridge.models.studies.PasswordPolicy.FIXED_MAX_LENGTH);
         strength.setMinDiacritic(0);

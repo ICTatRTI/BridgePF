@@ -329,7 +329,7 @@ public class BridgeSpringConfig {
             .setId(bridgeConfig.getStormpathId())
             .setSecret(bridgeConfig.getStormpathSecret()).build();
         ClientBuilder clientBuilder = Clients.builder().setApiKey(apiKey);
-        ((DefaultClientBuilder)clientBuilder).setBaseUrl("https://enterprise.stormpath.io/v1");
+        ((DefaultClientBuilder)clientBuilder).setBaseUrl("https://api.stormpath.com/v1");
         return clientBuilder.build();        
     }
 
